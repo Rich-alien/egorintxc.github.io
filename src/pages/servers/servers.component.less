@@ -1,0 +1,112 @@
+:host {display: block;}
+.servers {
+  background: #2F2D32;
+  height: 100vh;
+
+  &__list {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 33px;
+    width: 100%;
+    padding: 60px 64px 54px 64px;
+    background: #19171B;
+    height: auto;
+    position: relative;
+    .button{
+      position: absolute;
+      right: 60px;
+      bottom: 20px;
+      //margin-top: 20px;
+      //margin-left: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 100px;
+      border: 1px solid transparent;
+      background: #6F4EFB;
+      &__link{
+        color: white;
+      }
+    }
+    .item {
+      display: flex;
+
+      &__images {
+        position: relative;
+        .logo{
+          position: absolute;
+          bottom: -37px;
+          left: -46px;
+        }
+      }
+
+      &__description {
+        width: 330px;
+        margin-left: 21px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          display: inline-block;
+          margin-bottom: 20px;
+          font-family: 'Rubik', serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 36px;
+          line-height: 26px;
+
+          &._green {
+            color: #01725E;
+          }
+
+          &._purple {
+            background: linear-gradient(90deg, #952AEC 20.41%, #7930FF 90.36%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+
+        .sub-title {
+          color: #BDBDBD;
+          font-family: 'Rubik', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    padding: 160px 102px 0;
+
+    .title {
+      font-family: 'Rubik', serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 110px;
+      align-items: flex-end;
+      text-transform: uppercase;
+      color: #ECECEC;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .subtitle {
+      display: inline-block;
+      width: 774px;
+      font-family: 'Rubik', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #828282;
+
+    }
+  }
+}

@@ -1,0 +1,121 @@
+:host {display: block;}
+.stream {
+  background: #2F2D32;
+  width: 100%;
+  height: 100vh;
+
+  &__template {
+    width: 100%;
+    height: 100%;
+    //background-image: url("/assets/stream_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+      display: flex;
+      align-items: center;
+      padding-top: 160px;
+      padding-left: 102px;
+
+      span {
+        margin-right: 40px;
+        font-family: 'Rubik', serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 110px;
+        align-items: flex-end;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #952AEC 20.41%, #7930FF 90.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+
+    .subtitle {
+      padding-left: 102px;
+      width: 736px;
+      display: inline-block;
+      margin-top: 30px;
+      font-family: 'Rubik', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #828282;
+    }
+
+    .list {
+      display: flex;
+      //justify-content: space-around;
+      margin-top: 33px;
+      width: 100%;
+      padding: 60px 64px 0 64px;
+      background: #19171B;
+      height: auto;
+
+      &__description {
+        width: 550px;
+
+        .selector {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          span{
+            font-family: 'Rubik', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 33px;
+            text-align: center;
+            color: #FFFFFF;
+          }
+          .button{
+            cursor: no-drop;
+          }
+
+        }
+        .text{
+          margin-top: 20px;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-end;
+          &__title{
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-right: 50px;
+            font-family: 'Rubik', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 33px;
+            color: #6F4EFB;
+          }
+          &__sub-title{
+            font-family: 'Rubik', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 33px;
+            color: #B8B8B8;
+            margin-right: 10px;
+          }
+        }
+      }
+      .place{
+        margin-top: 200px;
+        position: relative;
+        &__men{
+          position: absolute;
+          top: -70px;
+          left: 41%;
+          right: 50%;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+<div class="rules">
+  <div class="rules__template">
+    <h2 class="title">НАШИ ПРАВИЛА</h2>
+    <div class="list">
+      <div class="list__item" *ngFor="let item of listOfRules">
+        <div class="number">{{item.id}}</div>
+        <div class="description">
+          <span class="description__title">{{item.title}}</span>
+          <span class="description__sub-title">{{item.subTitle}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

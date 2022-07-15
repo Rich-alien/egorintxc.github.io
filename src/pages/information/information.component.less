@@ -1,0 +1,122 @@
+:host {display: block;}
+.information {
+  height: 100%;
+  flex-direction: column;
+  padding: 122px 50px 0;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #0E1116 0%, #581CCE 45.31%, #5F8CFE 80.21%, #C9F5FF 99.99%, #CFF1FF 100%);
+  position: relative;
+  &__moon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //z-index: 1;
+    background-image: url('/assets/moon.png');
+    background-repeat: no-repeat;
+    background-position: -150px -150px;
+  }
+
+  &__container {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+  }
+
+  &__text {
+    margin-top: 145px;
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      &__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 128px;
+        line-height: 144px;
+
+        &._first {
+          background: linear-gradient(94.77deg, #48B760 0%, #6BB748 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+
+        &._second {
+          background: linear-gradient(90deg, #952AEC 20.41%, #7930FF 90.36%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+
+    .subtitle {
+      width: 440px;
+      margin-top: 38px;
+
+      &__first {
+        font-family: 'Rubik', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 24px;
+        color: #BDBDBD;
+      }
+
+      &__second {
+        font-family: 'Rubik', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        color: #828282;
+      }
+    }
+
+    .talk-panda {
+      margin-top: 150px;
+    }
+  }
+
+  &__static-slide {
+    display: flex;
+    align-items: flex-end;
+    width: 682px;
+    //margin-left: -270px;
+
+    .slide {
+      &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          margin-bottom: 17px;
+          /*     width: 37px;
+               height: 37px;*/
+        }
+
+        span {
+          margin-bottom: 26px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 18px;
+          text-align: center;
+          color: #828282;
+        }
+      }
+    }
+  }
+}

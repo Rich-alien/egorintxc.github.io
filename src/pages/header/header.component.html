@@ -1,0 +1,14 @@
+<div class="header">
+  <div (click)="copeMessage()" class="header__link">
+    <img src="/assets/link.png" alt="link">
+      <span *ngIf="isTextVisible; else secondTextVisible"
+            class="fade">клик для копирования</span>
+    <ng-template #secondTextVisible>
+        <span class="fade_copy">успешно скопировано</span>
+    </ng-template>
+    <div class="container">
+      <div [style]="{'width': getWidthProgressBar()}"
+           class="header__progress-bar"></div>
+    </div>
+  </div>
+</div>

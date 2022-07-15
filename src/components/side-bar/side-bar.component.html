@@ -1,23 +1,50 @@
 <div class="navigation">
-<!--  <svg-icon  src="assets/icons/logo.svg"></svg-icon>-->
-  <div class="navigation__logo">
-    <img src="/assets/logo.jpg" alt="">
-    <span class="navigation__logo-s">S</span>
-    <span class="navigation__logo-w">W</span>
+  <div class="navigation__logo" routerLink="main">
+    <svg-icon src="/assets/logo.svg"></svg-icon>
+    <div class="text">
+      <span class="text__first">saved</span>
+      <span class="text__second">world</span>
+      <img class="text__stars"
+           src="/assets/green-stars.png"
+           alt="stars"/>
+    </div>
   </div>
   <div class="navigation__list">
-    <div class="link"
-         [class._active]="true">
-      Главная
-    </div>
-    <div class="link">Информация</div>
-    <div class="link">Наши сервера</div>
-    <div class="link">Правила</div>
-    <div class="link">Стримеры</div>
-    <div class="link">Поддержать</div>
+    <ng-container *ngFor="let item of linkArray">
+      <div class="link"
+           [routerLink]="item.id"
+           routerLinkActive="_active"
+           (click)="changePosition($event, item.id)">
+        <span>{{item.title}}</span>
+        <div *ngIf="item.isActive">
+          <img class="star _low"
+               [class._low-active]="item.isActive"
+               [class._low-deactive]="item.isDeActive"
+               src="/assets/star.png"
+               [alt]="STARS"/>
+          <img class="star _middle"
+               [class._middle-active]="item.isActive"
+               [class._middle-deactive]="item.isDeActive"
+               src="/assets/star.png"
+               [alt]="STARS"/>
+          <img class="star _bigger"
+               [class._bigger-active]="item.isActive"
+               [class._bigger-deactive]="item.isDeActive"
+               src="/assets/star.png"
+               [alt]="STARS"/>
+        </div>
+      </div>
+    </ng-container>
   </div>
   <div class="navigation__buttons">
-    <button class="button-line">Discord</button>
-    <button class="button-sub">Вконтакте</button>
+    <a target="_blank" href="https://discord.com/invite/UsBJGuYpab">
+      <svg-icon class="icon icon__discord" src="/assets/icons/discord.svg"></svg-icon>
+    </a>
+    <a target="_blank" href="https://vk.com/savedworld">
+      <svg-icon class="icon icon__vk" src="/assets/icons/vk.svg"></svg-icon>
+    </a>
+    <a target="_blank" style="margin-bottom: -4px" href="https://vk.com/write-209328214">
+      <svg-icon class="msg icon__msg" src="/assets/msg.svg"></svg-icon>
+    </a>
   </div>
 </div>

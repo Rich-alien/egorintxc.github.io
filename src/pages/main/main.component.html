@@ -1,3 +1,14 @@
 <div class="main">
-
+  <div class="video-background">
+    <div class="video-foreground">
+      <video src="/assets/video/video.mp4" autoplay muted loop="loop">
+      </video>
+    </div>
+  </div>
+  <app-header></app-header>
+  <button class="main__button"
+          (click)="changeStars()"
+          routerLink="/play">
+    Начать играть
+  </button>
 </div>
