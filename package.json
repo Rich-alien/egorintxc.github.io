@@ -22,6 +22,7 @@
     "rxjs": "~7.5.0",
     "swup": "^2.0.16",
     "tslib": "^2.3.0",
+    "twitch-player": "^2.0.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

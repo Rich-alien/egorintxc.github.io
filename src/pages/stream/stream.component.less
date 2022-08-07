@@ -7,7 +7,6 @@
   &__template {
     width: 100%;
     height: 100%;
-    //background-image: url("/assets/stream_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -49,16 +48,36 @@
 
     .list {
       display: flex;
-      //justify-content: space-around;
+      align-items: center;
+      justify-content: space-around;
       margin-top: 33px;
       width: 100%;
-      padding: 60px 64px 0 64px;
+      padding: 60px 64px 30px 64px;
       background: #19171B;
       height: auto;
 
       &__description {
         width: 550px;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #FFFFFF;
+          font-family: 'Rubik', serif;
+          font-style: italic;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+          text-transform: uppercase;
+          width: 245px;
+          padding: 13px 0;
+          background: #6F4EFB;
+          border-radius: 500px;
+        }
         .selector {
           width: 100%;
           display: flex;
@@ -73,20 +92,22 @@
             color: #FFFFFF;
           }
           .button{
-            cursor: no-drop;
+            cursor: pointer;
           }
 
         }
         .text{
+          margin-bottom: 22px;
           margin-top: 20px;
           display: flex;
           width: 100%;
           flex-direction: column;
           align-items: flex-end;
           &__title{
+            text-align: end;
+            height: 58px;
             display: inline-block;
-            margin-bottom: 20px;
-            margin-right: 50px;
+            margin-bottom: 10px;
             font-family: 'Rubik', serif;
             font-style: normal;
             font-weight: 500;
@@ -95,6 +116,7 @@
             color: #6F4EFB;
           }
           &__sub-title{
+            height: 135px;
             font-family: 'Rubik', serif;
             font-style: normal;
             font-weight: 400;
@@ -106,14 +128,6 @@
         }
       }
       .place{
-        margin-top: 200px;
-        position: relative;
-        &__men{
-          position: absolute;
-          top: -70px;
-          left: 41%;
-          right: 50%;
-        }
       }
     }
   }

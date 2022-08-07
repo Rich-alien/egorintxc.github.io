@@ -9,21 +9,33 @@
       играть в Minecraft, то почему бы не совместить приятное с приятным?
     </span>
     <div class="list">
-     <div class="list__description">
-       <div class="selector">
-         <img src="/assets/left_arrow.png" alt="" class="button arrow-left">
-         <span>Скоро...</span>
-         <img src="/assets/right_arrow.png" alt="" class="button arrow-right">
-       </div>
-       <div class="text">
-         <span class="text__title">Находится в разработке</span>
-         <span class="text__sub-title">Здесь вы увидите ваших любимых стримеров нашего сервера</span>
-       </div>
-     </div>
+      <div class="list__description">
+        <div class="selector">
+          <img
+            class="button arrow-left"
+            src="/assets/left_arrow.png"
+            alt="<"
+            (click)="rollBackPerson()"
+          ><span>{{slideList[currentPosition].id}}</span>
+          <img
+            class="button arrow-right"
+            src="/assets/right_arrow.png"
+            alt=">"
+            (click)="nextPerson()"
+          ></div>
+        <div class="text">
+          <span class="text__title">{{slideList[currentPosition].title}}</span>
+          <span class="text__sub-title">{{slideList[currentPosition].description}}</span>
+        </div>
+        <a target="_blank"
+           [href]="getTwitchUrlByID(slideList[currentPosition].id)"
+        >Смотреть</a>
+      </div>
       <div class="place">
-        <img class="place__men" src="/assets/strimer.png" alt="">
-        <img src="/assets/place.png" alt="">
+        <div id="twitch-player"></div>
       </div>
     </div>
   </div>
+
 </div>
+<!--TODO: обернуть плеер в релоудер чтобы динамически менялось -->
