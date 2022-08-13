@@ -5,6 +5,9 @@ import {PagesModel} from "../pages/pages.model";
 import {AppRoutingModule} from "./app.routing";
 import {ComponentsModule} from "../components/components.module";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     BrowserModule,
     AppRoutingModule,
     PagesModel,
-    ComponentsModule
+    ComponentsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -12,19 +12,31 @@ import {StepsComponent} from "./information/components/steps/steps.component";
 import {ServersComponent} from "./servers/servers.component";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularSvgIconModule} from "angular-svg-icon";
+import {LoginComponent} from "./auth/login/login.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {ChatComponent} from "./chat/chat.component";
+
 @NgModule({
-    imports: [
-        BrowserAnimationsModule,
-        ComponentsModule,
-        CommonModule,
-        RouterModule,
-        AngularSvgIconModule
-    ],
-  declarations: [MainComponent,
+  imports: [
+    BrowserAnimationsModule,
+    ComponentsModule,
+    CommonModule,
+    RouterModule,
+    AngularSvgIconModule,
+    ReactiveFormsModule
+  ],
+  declarations: [
+    MainComponent,
     InformationComponent,
-    HeaderComponent, NewsComponent, RulesComponent, StreamComponent,
+    HeaderComponent,
+    NewsComponent,
+    RulesComponent,
+    StreamComponent,
     StepsComponent,
-    ServersComponent],
+    ServersComponent,
+    LoginComponent,
+    ChatComponent
+  ],
   exports: [MainComponent]
 })
 export class PagesModel {
