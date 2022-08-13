@@ -77,6 +77,11 @@
           padding: 13px 0;
           background: #6F4EFB;
           border-radius: 500px;
+          transition: 0.5s;
+          &:hover{
+            transition: 0.5s;
+            background: #6f4efba1;
+          }
         }
         .selector {
           width: 100%;
@@ -92,7 +97,19 @@
             color: #FFFFFF;
           }
           .button{
+            &._left{
+              transform: rotate(180deg);
+            }
             cursor: pointer;
+            ::ng-deep path{
+              transition: 1s;
+            }
+            &:hover {
+              ::ng-deep path{
+                transition: 1s;
+                fill: #6F4EFB;
+              }
+            }
           }
 
         }
@@ -113,6 +130,7 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 33px;
+            margin-right: -65px;
             color: #6F4EFB;
           }
           &__sub-title{
@@ -128,6 +146,14 @@
         }
       }
       .place{
+        position: relative;
+        &__image{
+          position: absolute;
+          //bottom: 0;
+          //left: 0;
+          bottom: -80px;
+          left: -164px;
+        }
       }
     }
   }

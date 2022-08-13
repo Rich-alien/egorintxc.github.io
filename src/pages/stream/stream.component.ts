@@ -45,4 +45,8 @@ export class StreamComponent implements OnInit {
   getTwitchUrlByID(id: string): string {
     return 'https://www.twitch.tv/' + id;
   }
+
+  getImageUrlByID(id: string) {
+    return 'assets/streamers/' + id + '.png'
+  }
 }

@@ -11,18 +11,18 @@
     <div class="list">
       <div class="list__description">
         <div class="selector">
-          <img
-            class="button arrow-left"
-            src="/assets/left_arrow.png"
-            alt="<"
+          <svg-icon
+            class="button _left"
+            src="/assets/streamers/arrow.svg"
             (click)="rollBackPerson()"
-          ><span>{{slideList[currentPosition].id}}</span>
-          <img
-            class="button arrow-right"
-            src="/assets/right_arrow.png"
-            alt=">"
+          ></svg-icon>
+          <span>{{slideList[currentPosition].id}}</span>
+          <svg-icon
+            class="button"
+            src="/assets/streamers/arrow.svg"
             (click)="nextPerson()"
-          ></div>
+          ></svg-icon>
+        </div>
         <div class="text">
           <span class="text__title">{{slideList[currentPosition].title}}</span>
           <span class="text__sub-title">{{slideList[currentPosition].description}}</span>
@@ -32,6 +32,9 @@
         >Смотреть</a>
       </div>
       <div class="place">
+        <img class="place__image"
+             [src]="getImageUrlByID(slideList[currentPosition].id)"
+             alt="str">
         <div id="twitch-player"></div>
       </div>
     </div>
