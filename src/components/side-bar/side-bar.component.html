@@ -1,4 +1,4 @@
-<div class="navigation">
+<div class="navigation" [hidden]="isVisibal | async">
   <div class="navigation__logo" routerLink="main">
     <svg-icon src="/assets/logo.svg"></svg-icon>
     <div class="text">

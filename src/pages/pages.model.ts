@@ -11,18 +11,38 @@ import {RouterModule} from "@angular/router";
 import {StepsComponent} from "./information/components/steps/steps.component";
 import {ServersComponent} from "./servers/servers.component";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AngularSvgIconModule} from "angular-svg-icon";
+import {LoginComponent} from "./auth/login/login.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {ChatComponent} from "./chat/chat.component";
+import {TuiFieldErrorPipeModule, TuiInputModule} from "@taiga-ui/kit";
+import {TuiErrorModule, TuiHintModule} from "@taiga-ui/core";
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     ComponentsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    AngularSvgIconModule,
+    ReactiveFormsModule,
+    TuiFieldErrorPipeModule,
+    TuiErrorModule,
+    TuiInputModule,
+    TuiHintModule
   ],
-  declarations: [MainComponent,
+  declarations: [
+    MainComponent,
     InformationComponent,
-    HeaderComponent, NewsComponent, RulesComponent, StreamComponent,
+    HeaderComponent,
+    NewsComponent,
+    RulesComponent,
+    StreamComponent,
     StepsComponent,
-    ServersComponent],
+    ServersComponent,
+    LoginComponent,
+    ChatComponent
+  ],
   exports: [MainComponent]
 })
 export class PagesModel {
