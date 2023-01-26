@@ -1,16 +1,32 @@
 <div class="login">
-  <form class="form" [formGroup]="form">
-    <div class="form__input">name <input type="text" formControlName="username"></div>
-    <div class="form__input">email <input type="email" formControlName="email"></div>
-    <div class="form__input">password <input type="password" formControlName="password"></div>
-    <button class="button" (click)="onSubmit()">Регистрация</button>
-  </form>
+
   <form class="form" [formGroup]="formAuth">
-    <div class="form__input">email <input type="email" formControlName="email"></div>
-    <div class="form__input">password <input type="password" formControlName="password"></div>
+    <tui-input
+      tuiTextfieldExampleText="Field placeholder"
+      formControlName="email"
+      tuiHintContent="A tooltip"
+    >
+      Логин/Почта
+      <span class="tui-required"></span>
+    </tui-input>
+    <tui-error
+      formControlName="email"
+      [error]="[] | tuiFieldError | async"
+    ></tui-error>
+    <tui-input
+      tuiTextfieldExampleText="Field placeholder"
+      formControlName="password"
+      tuiHintContent="A tooltip"
+    >
+      Пароль
+      <span class="tui-required"></span>
+    </tui-input>
+    <tui-error
+      formControlName="password"
+      [error]="[] | tuiFieldError | async"
+    ></tui-error>
     <button class="button" (click)="signIn()">Вход</button>
   </form>
   <button class="chat-button" routerLink="/chat">got to chat</button>
 </div>
-
-
+<div (click)="clickMine()"  style="width: 50px;height: 50px;background: black;color: white">nigger</div>

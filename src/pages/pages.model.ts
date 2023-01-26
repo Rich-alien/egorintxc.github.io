@@ -15,6 +15,8 @@ import {AngularSvgIconModule} from "angular-svg-icon";
 import {LoginComponent} from "./auth/login/login.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ChatComponent} from "./chat/chat.component";
+import {TuiFieldErrorPipeModule, TuiInputModule} from "@taiga-ui/kit";
+import {TuiErrorModule, TuiHintModule} from "@taiga-ui/core";
 
 @NgModule({
   imports: [
@@ -23,7 +25,11 @@ import {ChatComponent} from "./chat/chat.component";
     CommonModule,
     RouterModule,
     AngularSvgIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TuiFieldErrorPipeModule,
+    TuiErrorModule,
+    TuiInputModule,
+    TuiHintModule
   ],
   declarations: [
     MainComponent,

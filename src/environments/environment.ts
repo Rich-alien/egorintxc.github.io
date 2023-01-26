@@ -15,6 +15,7 @@ export const environment = {
   },
   database: 'firebase',
   socialAuthEnabled: true,
+  mineShitApi: ' https://185.43.5.123',
 };
 
 /*

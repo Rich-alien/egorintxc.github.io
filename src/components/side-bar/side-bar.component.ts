@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Link} from "../../modules/link";
 import {Router} from "@angular/router";
 import {SidebarService} from "../../services/sidebar.service";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-side-bar',
@@ -18,12 +19,14 @@ export class SideBarComponent implements OnInit {
     {id: 'play', title: 'Начать играть', isActive: false, isRoute: false, isDeActive: false},
   ]
   public lastActiveID = 'main';
+  public isVisibal!: BehaviorSubject<boolean>;
 
   constructor(private router: Router,
               private sideBarService: SidebarService) {
   }
 
   ngOnInit(): void {
+    this.isVisibal = this.sideBarService.barVisibal;
     setTimeout(() => {
       this.lastActiveID = this.router.url.substr(1);
       this.linkArray.map((item: Link) => {
@@ -31,7 +34,7 @@ export class SideBarComponent implements OnInit {
       })
     }, 50)
     this.sideBarService.handleChangeStars.subscribe(
-      ()=>{
+      () => {
         setTimeout(() => {
           this.lastActiveID = this.router.url.substr(1);
           this.linkArray.map((item: Link) => {

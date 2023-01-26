@@ -1,19 +1,30 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthService} from "../../../services/auth.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../../../services/user.service";
+import {SidebarService} from "../../../services/sidebar.service";
+import {MineAuthService} from "../../../services/mine-auth.service";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.less']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor(private authService: AuthService, private userService: UserService) {
+  constructor(private readonly authService: AuthService,
+              private readonly userService: UserService,
+              private readonly sideBarService: SidebarService,
+              private readonly mine: MineAuthService) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sideBarService.changeStateBar(true)
+  }
+
+  public clickMine() {
+    this.mine.signIn();
+  }
 
   public form: FormGroup = new FormGroup(
     {
@@ -47,5 +58,9 @@ export class LoginComponent implements OnInit {
 
   logout() {
 
+  }
+
+  ngOnDestroy(): void {
+    this.sideBarService.changeStateBar(true);
   }
 }

@@ -8,6 +8,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import {TuiRootModule} from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
     PagesModel,
     ComponentsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    TuiRootModule,
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
